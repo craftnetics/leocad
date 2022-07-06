@@ -75,14 +75,12 @@ https://www.leocad.org/docs/tutorial1.html to learn how to use LeoCAD.
 This use case is for continuous 3D printing of LeoCAD output as obj format. This is the first step of continuous 3D printing and one can use the current version in Craftnetics repository to export the overall Lego design piece by piece. Please see the video below:
 
 <p align="center">
-  <a href="[LeoCAD AutoPrint Export](https://www.youtube.com/embed/DyD8s7upo6U)/">
+  <a href="https://www.youtube.com/embed/DyD8s7upo6U">
   <img src="./LeoCAD_AutoPrint.gif"
      alt="LeoCAD AutoPrint Export"
      style="float: center; margin-right: 10px;" />
   </a>
 </p> 
-
-<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Legal Disclaimer
 
