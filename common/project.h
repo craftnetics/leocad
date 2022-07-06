@@ -97,6 +97,7 @@ public:
 	void ExportHTML(const lcHTMLExportOptions& Options);
 	bool ExportPOVRay(const QString& FileName);
 	bool ExportWavefront(const QString& FileName);
+	bool ExportAutoPrint(const QString& FileName);
 
 	void UpdatePieceInfo(PieceInfo* Info) const;
 

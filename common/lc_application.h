@@ -105,6 +105,7 @@ struct lcCommandLineOptions
 	bool Exit;
 	bool SaveImage;
 	bool SaveWavefront;
+	bool SaveAutoPrint;
 	bool Save3DS;
 	bool SaveCOLLADA;
 	bool SaveHTML;
@@ -144,6 +145,7 @@ struct lcCommandLineOptions
 	QString CameraName;
 	QString ProjectName;
 	QString SaveWavefrontName;
+	QString SaveAutoPrintName;;
 	QString Save3DSName;
 	QString SaveCOLLADAName;
 	QString SaveHTMLName;

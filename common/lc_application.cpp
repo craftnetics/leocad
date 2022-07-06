@@ -358,6 +358,7 @@ lcCommandLineOptions lcApplication::ParseCommandLineOptions()
 	Options.Exit = false;
 	Options.SaveImage = false;
 	Options.SaveWavefront = false;
+	Options.SaveAutoPrint = false;
 	Options.Save3DS = false;
 	Options.SaveCOLLADA = false;
 	Options.SaveHTML = false;
@@ -778,6 +779,11 @@ lcCommandLineOptions lcApplication::ParseCommandLineOptions()
 			Options.SaveWavefront = true;
 			ParseString(Options.SaveWavefrontName, false);
 		}
+		else if (Option == QLatin1String("-obj") || Option == QLatin1String("--export-autoprint"))
+		{
+			Options.SaveAutoPrint = true;
+			ParseString(Options.SaveAutoPrintName, false);
+		}
 		else if (Option == QLatin1String("-3ds") || Option == QLatin1String("--export-3ds"))
 		{
 			Options.Save3DS = true;
@@ -840,6 +846,7 @@ lcCommandLineOptions lcApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  -cc, --color-contrast <float>: Color contrast value between 0.0 and 1.0.\n");
 			Options.StdOut += tr("  -ldv, --light-dark-value <float>: Light/Dark color value between 0.0 and 1.0.\n");
 			Options.StdOut += tr("  -obj, --export-wavefront <outfile.obj>: Export the model to Wavefront OBJ format.\n");
+			Options.StdOut += tr("  -obj, --export-autoprint <outfile.obj>: Export the model to Wavefront OBJ format for AutoPrint.\n");
 			Options.StdOut += tr("  -3ds, --export-3ds <outfile.3ds>: Export the model to 3D Studio 3DS format.\n");
 			Options.StdOut += tr("  -dae, --export-collada <outfile.dae>: Export the model to COLLADA DAE format.\n");
 			Options.StdOut += tr("  -html, --export-html <folder>: Create an HTML page for the model.\n");
@@ -888,7 +895,7 @@ lcCommandLineOptions lcApplication::ParseCommandLineOptions()
 			Options.StdErr += tr("--camera-position is ignored when --camera-angles is set.\n");
 	}
 
-	const bool SaveAndExit = (Options.SaveImage || Options.SaveWavefront || Options.Save3DS || Options.SaveCOLLADA || Options.SaveHTML);
+	const bool SaveAndExit = (Options.SaveImage || Options.SaveWavefront || Options.SaveAutoPrint || Options.Save3DS || Options.SaveCOLLADA || Options.SaveHTML);
 
 	if (SaveAndExit && Options.ProjectName.isEmpty())
 	{
@@ -929,7 +936,7 @@ lcStartupMode lcApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 		return lcStartupMode::Error;
 	}
 
-	const bool SaveAndExit = (Options.SaveImage || Options.SaveWavefront || Options.Save3DS || Options.SaveCOLLADA || Options.SaveHTML);
+	const bool SaveAndExit = (Options.SaveImage || Options.SaveWavefront || Options.SaveAutoPrint || Options.Save3DS || Options.SaveCOLLADA || Options.SaveHTML);
 
 	if (!SaveAndExit)
 	{
@@ -1138,6 +1145,31 @@ lcStartupMode lcApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			}
 
 			if (mProject->ExportWavefront(FileName))
+				StdOut << tr("Saved '%1'.\n").arg(FileName);
+		}
+		
+		if (Options.SaveAutoPrint)
+		{
+			QString FileName;
+
+			if (!Options.SaveAutoPrintName.isEmpty())
+				FileName = Options.SaveAutoPrintName;
+			else
+				FileName = Options.ProjectName;
+
+			QString Extension = QFileInfo(FileName).suffix().toLower();
+
+			if (Extension.isEmpty())
+			{
+				FileName += ".obj";
+			}
+			else if (Extension != "obj")
+			{
+				FileName = FileName.left(FileName.length() - Extension.length() - 1);
+				FileName += ".obj";
+			}
+
+			if (mProject->ExportAutoPrint(FileName))
 				StdOut << tr("Saved '%1'.\n").arg(FileName);
 		}
 

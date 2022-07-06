@@ -442,6 +442,7 @@ void lcMainWindow::CreateMenus()
 	ExportMenu->addAction(mActions[LC_FILE_EXPORT_HTML]);
 	ExportMenu->addAction(mActions[LC_FILE_EXPORT_POVRAY]);
 	ExportMenu->addAction(mActions[LC_FILE_EXPORT_WAVEFRONT]);
+	ExportMenu->addAction(mActions[LC_FILE_EXPORT_AUTOPRINT]);
 	FileMenu->addSeparator();
 	FileMenu->addAction(mActions[LC_FILE_RENDER]);
 	FileMenu->addAction(mActions[LC_FILE_INSTRUCTIONS]);
@@ -2600,7 +2601,11 @@ void lcMainWindow::HandleCommand(lcCommandId CommandId)
 	case LC_FILE_EXPORT_WAVEFRONT:
 		lcGetActiveProject()->ExportWavefront(QString());
 		break;
-
+	
+	case LC_FILE_EXPORT_WAVEFRONT:
+		lcGetActiveProject()->ExportAutoPrint(QString());
+		break;
+		
 	case LC_FILE_RENDER:
 		ShowRenderDialog();
 		break;
