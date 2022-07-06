@@ -2602,7 +2602,7 @@ void lcMainWindow::HandleCommand(lcCommandId CommandId)
 		lcGetActiveProject()->ExportWavefront(QString());
 		break;
 	
-	case LC_FILE_EXPORT_WAVEFRONT:
+    case LC_FILE_EXPORT_AUTOPRINT:
 		lcGetActiveProject()->ExportAutoPrint(QString());
 		break;
 		
