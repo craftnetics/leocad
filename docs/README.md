@@ -76,7 +76,7 @@ This use case is for continuous 3D printing of LeoCAD output as obj format. This
 
 <p align="center">
   <a href="[LeoCAD AutoPrint Export](https://www.youtube.com/embed/DyD8s7upo6U)/">
-  <img src="./docs/LeoCAD_AutoPrint.gif"
+  <img src="./LeoCAD_AutoPrint.gif"
      alt="LeoCAD AutoPrint Export"
      style="float: center; margin-right: 10px;" />
   </a>
