@@ -71,6 +71,10 @@ https://www.leocad.org/docs/tutorial1.html to learn how to use LeoCAD.
 - Unstable builds:
   https://github.com/leozide/leocad/releases/tag/continuous
 
+# Use Case: AutoPrint
+This use case is for continuous 3D printing of LeoCAD output as obj format. This is the first step of continuous 3D printing and one can use the current version in Craftnetics repository to export the overall Lego design piece by piece. Please see the video below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DyD8s7upo6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Legal Disclaimer
 
