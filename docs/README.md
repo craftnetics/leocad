@@ -71,6 +71,9 @@ https://www.leocad.org/docs/tutorial1.html to learn how to use LeoCAD.
 - Unstable builds:
   https://github.com/leozide/leocad/releases/tag/continuous
 
+# How to Import the LDraw Database for Opening LDR models?
+
+
 # Use Case: AutoPrint
 This use case is for continuous 3D printing of LeoCAD output as obj format. This is the first step of continuous 3D printing and one can use the current version in Craftnetics repository to export the overall Lego design piece by piece. Please see the video below:
 
