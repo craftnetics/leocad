@@ -87,9 +87,10 @@ This use case is for continuous 3D printing of LeoCAD output as obj format. This
  {Add Image}
  
 Instead, you need to install the provided [database](https://www.ldraw.org/parts/latest-parts.html) in the repository and import it to your LeoCAD installation. Once you import the database you should see the bricks on the right hand side of the user interface under parts window (Please see the animated gif or YouTube video below).
+
 <p align="center">
   <a href="https://youtu.be/el6temkfzkc">
-  <img src="./docs/AutoPrint/AddingLibraryLeoCAD.gif"
+  <img src="./AutoPrint/AddingLibraryLeoCAD.gif"
      alt="LeoCAD AutoPrint Export"
      style="float: center; margin-right: 10px;" />
   </a>
