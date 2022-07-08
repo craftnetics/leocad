@@ -83,10 +83,11 @@ This use case is for continuous 3D printing of LeoCAD output as obj format. This
 </p> 
 
 ## Requirements
-- Importing LDraw Database for LDR models: If you would like to open the provided LDR example (small truck) without appropriate database all you will see the image below:
+- Importing LDraw Database for LDR models: If you would like to open the provided LDR example (small truck) without appropriate database all you will see the image below:  
+
  {Add Image}
  
-Instead, you need to install the provided in [LDraw part database](https://www.ldraw.org/parts/latest-parts.html) or the repository [/docs/autoprint/complete.zip]() and import it to your LeoCAD installation. Once you import the database you should see the bricks on the right hand side of the user interface under parts window (Please see the animated gif or YouTube video below).
+- Instead, you need to install the provided in [LDraw part database](https://www.ldraw.org/parts/latest-parts.html) or the repository [/docs/autoprint/complete.zip]() and import it to your LeoCAD installation. Once you import the database you should see the bricks on the right hand side of the user interface under parts window (Please see the animated gif or YouTube video below).
 
 <p align="center">
   <a href="https://youtu.be/el6temkfzkc">
