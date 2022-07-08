@@ -90,7 +90,7 @@ Instead, you need to install the provided [database](https://www.ldraw.org/parts
 
 <p align="center">
   <a href="https://youtu.be/el6temkfzkc">
-  <img src="./AutoPrint/AddingLibraryLeoCAD.gif"
+  <img src="./autoprint/AddingLibraryLeoCAD.gif"
      alt="LeoCAD AutoPrint Export"
      style="float: center; margin-right: 10px;" />
   </a>
