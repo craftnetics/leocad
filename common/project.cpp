@@ -2155,7 +2155,7 @@ bool Project::ExportAutoPrint(const QString& FileName)
 	std::vector<lcModelPartsEntry> ModelParts = GetModelParts();
     char Line[1024];
     quint32 vert = 1;
-    int NumPieces = 0;
+    int NumPieces = 0; 
 
 	if (ModelParts.empty())
 	{
