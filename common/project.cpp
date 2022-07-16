@@ -2152,17 +2152,20 @@ bool Project::ExportWavefront(const QString& FileName)
 
 bool Project::ExportAutoPrint(const QString& FileName)
 {
+	//
 	std::vector<lcModelPartsEntry> ModelParts = GetModelParts();
     char Line[1024];
     quint32 vert = 1;
-    int NumPieces = 0; 
-
+    int NumPieces = 0;
+	
+	//
 	if (ModelParts.empty())
 	{
 		QMessageBox::information(gMainWindow, tr("LeoCAD"), tr("Nothing to export."));
 		return false;
 	}
 
+	//
     auto GetMeshID = [](const lcModelPartsEntry& ModelPart)
     {
         const PieceInfo* Info = ModelPart.Info;
@@ -2174,6 +2177,7 @@ bool Project::ExportAutoPrint(const QString& FileName)
         return ID;
     };
 
+	//
     for (const lcModelPartsEntry& ModelPart : ModelParts)
     {
         QString ID_FileName = GetMeshID(ModelPart);
